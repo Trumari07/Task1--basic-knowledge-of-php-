@@ -7,4 +7,8 @@ function fibo($i) {
   return fibo($i - 1) + fibo($i -2); 
    } 
 } 
+<<<<<<< HEAD
  fibo(5);
+=======
+ fibo(5);
+>>>>>>> a54660c228d6ee33adfd4bf7d9c38e696f71f10a
