@@ -2,3 +2,31 @@
 Подсчитать процентное соотношение положительных/отрицательных/нулевых/
 простых чисел
 Отсортировать элементы по возрастанию/убыванию
+
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+ 
+int main()
+{
+    srand((int)time(0));
+    int N, even=0, odd=0;
+    cout <<"N="; cin >>N;    
+    
+    int*a = new int[N];
+ 
+    for (int i = 0; i < N; i++)
+      {
+      a[i]=rand()%199 - 99;
+      if (a[i]>0) even++;
+      else if (a[i]<0) odd++;      
+      cout <<a[i]<<" ";
+      }  
+    
+    cout <<"\neven="<<even<<"  odd="<<odd<<"   nul="<<N-even-odd<<"\n";
+    cout <<(double)even*100/N<<"%  "<<(double)odd*100/N<<"%  "<<(double)(N-even-odd)*100/N<<"%\n";      
+    delete[]a;
+system("pause");
+return 0;
+}
